@@ -1,0 +1,157 @@
+@use 'colors' as colors;
+
+.portafolio{
+    width: 1600px;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid colors.$color_border_buttom;
+    background-color: colors.$color_white;
+
+    .container{
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    &__nav{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        gap: 100px;
+
+        &__webstudio{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 31px;
+            margin-left: 100px;
+            text-align: right;
+            letter-spacing: 0.03em;
+            color: colors.$color_hover;
+        }
+        &__menu{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+    
+            .link__header{
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.02em;
+                color: colors.$color_letter;
+            }
+            .link__header:hover,
+            .link__header:focus{
+                color: colors.$color_hover;
+            }
+            .link__header::after{
+            position: absolute;
+            content: "";
+            width: 63px;
+            height: 4px;
+            left: 98px;
+            top: 15px;
+            background: colors.$color_hover;
+            border-radius: 2px;
+            margin-top: 29px;
+            }
+        
+            &__barra::after{
+                opacity: 1;
+            }
+        }
+    }
+    &__contacts{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 50px;
+
+        &__email{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            cursor: pointer;
+
+            .svg{
+                fill: colors.$color_fill_grey;
+                margin-right: 4px;
+            }
+            .letter{
+                width: 118px;
+                height: 16px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.02em;
+                color: colors.$color_fill_grey;
+                text-decoration: none;
+            }
+        }
+        &__email:hover .letter,
+        &__email:focus .letter {
+            color: colors.$color_hover;
+        }
+        &__email:hover .svg,
+        &__email:focus .svg {
+            fill: colors.$color_hover;
+        }
+        
+        &__fhone{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            cursor: pointer;
+
+            .svg{
+                fill: colors.$color_fill_grey;
+                margin-right: 4px;
+            }
+            .number{
+                width: 118px;
+                height: 16px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.02em;
+                color: colors.$color_fill_grey;
+                text-decoration: none;
+            }
+        }
+        &__fhone:hover .number,
+        &__fhone:focus .number {
+            color: colors.$color_hover;
+        }
+        &__fhone:hover .svg,
+        &__fhone:focus .svg {
+            fill: colors.$color_hover;
+        }
+    }
+}

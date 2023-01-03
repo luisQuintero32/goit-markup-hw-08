@@ -1,0 +1,79 @@
+@use 'colors' as colors;
+
+@mixin icon__first() {
+    width: 75px;
+    height: 70px;
+}
+.--separator{
+    margin-bottom: 5px;
+}
+
+@mixin title(){
+    width: 270px;
+    height: 16px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: colors.$color_letter;
+}
+
+@mixin paragraph(){
+    width: 270px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: colors.$color_fill_grey;
+}
+
+.quality{
+    width: 100vw;
+    height: 350PX;
+    background: colors.$color_background_white;
+
+    &__box1{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 82PX;
+    gap: 30px;
+    background: colors.$color_background-buttom;
+    list-style-type: none;
+
+        &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 270px;
+        height: 270px;
+        margin-bottom: 99px;
+        background: colors.$color_background-buttom;
+        
+            &__svg{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 270px;
+                height: 120px;
+                margin-bottom: 30px;
+                background: colors.$color_background_white;
+                
+
+                .icon__first{
+                    @include icon__first();
+                }
+            }
+        }
+        &__title1{
+            @include title();
+        }
+        &__paragraph1{
+            @include paragraph();
+        }
+    }
+}

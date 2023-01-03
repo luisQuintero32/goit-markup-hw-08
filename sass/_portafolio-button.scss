@@ -1,0 +1,45 @@
+@use 'colors' as colors;
+
+.main__portafolio{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.section__button{
+    width: 100vw;
+    height: 194px;
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 194px;
+        background: colors.$color_white;
+        list-style: none;
+        gap: 8px;
+
+        .buttonn{
+            width: max-content;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: colors.$color_letter;
+            height: 38px;
+            background: colors.$color_background-buttom;
+            border-radius: 4px;
+            border: 0;
+            cursor: pointer;
+            padding: 6px 24px;
+            box-shadow:colors.$color_boxshadow_2;
+        }
+        .buttonn:hover,
+        .buttonn:focus{
+            background: colors.$color_hover;
+            color: colors.$color_white;
+        }
+    }
+}

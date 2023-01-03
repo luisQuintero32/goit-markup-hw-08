@@ -1,0 +1,221 @@
+@use 'colors' as colors;
+
+.footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100vw;
+    height: 250px;
+    background: colors.$color_background_banner;
+
+    &__box{
+        display: flex;
+        align-items: initial;
+        justify-content: space-evenly; 
+        flex-direction: column;
+        width: 2500px;
+
+        &__logo{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 31px;
+            letter-spacing: 0.03em;
+            color: colors.$color_hover;
+        }
+    }
+}
+.footer__box__contact{
+    
+    &__left{
+        list-style: none;
+
+        .direction{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            color: colors.$color_white;
+        }
+        .direction:hover,
+        .direction:focus{
+            color: colors.$color_hover;
+        }
+        .email{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.03em;
+            color: colors.$color_letter2;
+        }
+        .email:hover,
+        .email:focus{
+            color: colors.$color_hover;
+        }
+        .fhone{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.03em;
+            color: colors.$color_letter2;
+        }
+        .fhone:hover,
+        .fhone:focus{
+            color: colors.$color_hover;
+        }
+    }
+}
+.networks{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 40px;
+
+    &__title{
+        width: 150px;
+        height: 16px;
+        margin-bottom: 20px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        color: colors.$color_white;
+    }
+    &__logos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 10px;
+
+        &__svg{ 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: colors.$color_background-icon;
+
+            .icon{
+                padding-top: 20px;
+                padding-left: 1px;
+                width: 40px;
+                height: 40px;
+                margin-left: 11px;
+                fill: colors.$color_white;
+            }
+        }
+        &__svg:hover,
+        &__svg:focus{
+            background-color: colors.$color_hover;
+        }
+    }
+}
+.suscription{
+    width: 570px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 90px;
+
+    &__title{
+        width: 300px;
+        height: 16px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 15px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: colors.$color_white;
+    }
+    &__form{
+        
+        &__label{
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 5px;
+
+            &__input{
+                width: 358px;
+                height: 50px;
+                padding-left: 20px;
+                border: 1px solid colors.$color_border3;
+                filter: colors.$color_boxshadow;
+                border-radius: 4px;
+                background: colors.$color_background_banner;
+            }
+            &__input:hover,
+            &__input:focus{
+                background: #FFFFFF; 
+                outline: none;
+            }
+            
+            &__button{
+                width: 200px;
+                height: 50px;
+                box-shadow: colors.$color_boxshadow_1;
+                border-radius: 4px;
+                border: 1px solid colors.$color_border3;
+                background: colors.$color_background_white;
+                cursor: pointer;
+
+                span{
+                    position: absolute;
+                    top: 12px;
+                    left: 400px;
+                    width: 100px;
+                    height: 50px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 30px;
+                    letter-spacing: 0.06em;
+                    color: colors.$color_fill_grey;
+                }
+                span:hover,
+                span:hover{
+                    color: colors.$color_white;
+                }
+            }
+            &__button:hover,
+            &__button:focus{
+                background: colors.$color_hover; 
+                color: colors.$color_white;
+            }
+
+            &__icon{
+                position: absolute;
+                top: 14px; 
+                left: 520px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                fill: colors.$color_fill_grey;  
+            }
+            // &__icon:hover,
+            // &__icon:focus{
+            //     fill: colors.$color_white;
+            //     background: colors.$color_hover;
+            // }
+        }
+    }
+}

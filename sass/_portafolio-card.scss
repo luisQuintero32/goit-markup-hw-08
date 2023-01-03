@@ -1,0 +1,109 @@
+@use 'colors' as colors;
+
+.card{
+    padding-bottom: 82px;
+    width: 100vw;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background: colors.$color_white;
+
+    &__box{
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+        gap: 30px;
+        background: colors.$color_white;
+
+        &__product{
+            position:relative;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 368px;
+            height: 404px;
+            border: 1px solid colors.$color_white;
+            background: colors.$color_white;
+            cursor: pointer;
+
+            &__animation{
+                width: 366px;
+                height: 294px;
+                position: relative;
+                overflow: hidden;
+
+                &__emergent{
+                    position: absolute;
+                    top: 10px;
+                    height: 168px;
+                    width: 321px;
+                    padding: 63px 24px;
+                    background: colors.$color_background_emergent;
+                    transform: translateY(100%);
+                    transition: transform 250ms ease;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+                    p{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 28px;
+                        letter-spacing: 0.03em;
+                        color: colors.$color_white;
+                    }
+                }
+                
+                img{
+                    width: 368px;
+                    height: 294px;
+                    background: url(.jpg);
+                }
+            }
+            &__animation:hover + &__emergent{
+                transform: translateY(-100%);
+                
+            }
+            &__description{
+                padding-left: 24px;
+                
+                .--title{
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    width: 322px;
+                    height: 80px;
+                    letter-spacing: 0.06em;
+                    color: colors.$color_letter;
+                }
+                .title{
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    width: 322px;
+                    height: 36px;
+                    margin-top: 10px;
+                    letter-spacing: 0.06em;
+                    color: colors.$color_letter;
+                }
+                .paragraph{
+                    width: 322px;
+                    height: 36px;
+                    align-items: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
+                    margin-top: 10px;
+                    letter-spacing: 0.03em;
+                    color: colors.$color_fill_grey;
+                }
+            }
+        }
+        &__product:hover,
+        &__product:focus{
+            box-shadow: colors.$color_boxshadow_card;
+        }    
+    }
+}

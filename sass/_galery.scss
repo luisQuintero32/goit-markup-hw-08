@@ -1,0 +1,66 @@
+@use 'colors' as colors;
+
+.galery{
+    width: 100vw;
+    height: 579PX;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background: colors.$color_background-buttom;
+
+    &__title{
+        width: 371.15px;
+        margin-bottom: 55px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: colors.$color_letter;
+    }
+    &__images{
+        &__about{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            gap: 30px;
+
+            &__box{
+                position: relative;
+                width: 370px;
+                height: 294px;
+                .box__add{
+                    position: relative;
+                    width: 370px;
+                    &__image{
+
+                    }
+                }
+                .label{
+                    position: absolute;
+                    width: 373px;
+                    height: 70px;
+                    top: 254px;
+                    display: flex;
+                    align-items: center;
+                    background: colors.$color_background_label;
+
+                    p{
+                        width: 373px;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 1.14;
+                        text-align: center;
+                        letter-spacing: 0.03em;
+                        text-transform: uppercase;
+                        color: colors.$color_white;
+                    }
+                }
+            }
+        }
+    }
+}

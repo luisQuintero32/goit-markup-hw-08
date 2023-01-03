@@ -1,0 +1,68 @@
+@use 'colors' as colors;
+
+.box-svg{
+    width: 100vw;
+    height: 1px;
+}
+
+.customers{
+    width: 100vw;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: colors.$color_background-buttom;
+
+    &__title{
+        width: 323px;
+        height: 36.98px;
+        margin-top: 1px;
+        margin-bottom: 44px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: colors.$color_letter;
+    }
+
+    &__logos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        &__box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 170px;
+            height: 81px;
+            border: 1px solid colors.$color_border2;
+            border-radius: 4px;
+            cursor: pointer;
+
+            .logos{
+                width: 100%;
+                height: 100%;
+                fill: colors.$color_fill_grey;
+                use{
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+            .logos:hover,
+            .logos:focus{
+                fill: colors.$color_hover;
+            }
+        }
+        &__box:hover,
+        &__box:focus{
+            border-color: colors.$color_hover;
+        }
+    }
+}

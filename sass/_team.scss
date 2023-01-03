@@ -1,0 +1,109 @@
+@use 'colors' as colors;
+
+.team{
+    width: 100vw;
+    height: 708PX;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background: colors.$color_background_white;
+
+    &__title{
+        width: 263px;
+        height: 42px;
+        margin-top: 94px;
+        margin-bottom: 50px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: colors.$color_letter;
+        
+    }
+    &__images{
+        width: 1149px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 37PX;
+    }
+}
+
+.team__images__card{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    background: colors.$color_white;
+    box-shadow: colors.$color_boxshadow_modal;
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 94px;
+    border-radius: 0px 0px 4px 4px;
+
+    h3{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-top: 30px;
+        color: colors.$color_letter;  
+    }
+    p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        margin-top: 10px;
+        color: colors.$color_fill_grey;
+    }
+    &__box{
+        margin-top: 16px;
+        margin-bottom: 20px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        width: 270px;
+        gap: 15px;
+        
+        &__icon{
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            cursor: pointer;
+            width: 44px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: colors.$color_white;
+
+            .icon__svg{
+                padding-left: 10px;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-color: colors.$color_white;
+
+                use{
+                    fill: colors.$color_border2;
+                }
+                use:hover{
+                    fill: #FFFFFF;
+                }
+            }
+            .icon__svg:hover,
+            .icon__svg:focus{
+                background: colors.$color_hover;
+            }
+        }
+    }
+}

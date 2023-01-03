@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2? family= Raleway:wght@700 & family= Roboto:wght@400;500;700;900 & display=swap');
+
+
+
+body{
+    background: white;
+    font-family: 'roboto''sans-serif';
+}
+
+/*  estilos d botones */
+.button{
+    background: #F5F4FA;
+    border-radius: 4px;
+    color: black;
+}
+.button:hover{
+    background: #2196F3;
+    color: white;
+}
+
+.titulo-principal{
+   /* color: #FFFFFF; */
+    color: black;
+}

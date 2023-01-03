@@ -1,0 +1,168 @@
+@use 'colors' as colors;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box__body{
+    margin: 0 auto;
+    width: 1200px;
+    font-family: 'roboto' 'Raleway';
+    background: colors.$color_background_white;
+}
+.header{
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 0 auto;
+    border-bottom: 1px solid colors.$color_border_buttom;
+    background-color: colors.$color_white;
+
+    .container{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    }
+
+    &__nav{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 100px;
+
+        &__link__webstudio{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+        margin-left: 100px;
+        text-align: right;
+        letter-spacing: 0.03em;
+
+        color: colors.$color_hover;
+        }
+
+        &__menu{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        list-style-type: none;
+
+            &__link{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            color: colors.$color_letter;
+            }
+
+            &__link:hover{
+            color: colors.$color_hover;
+            }
+        }
+    }
+}
+.header__nav__menu{
+    position: relative;
+
+    &__link::after{
+    // position: relative;
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 4px;
+    left: 0;
+    top: 16px;
+    background: colors.$color_hover;
+    border-radius: 2px;
+    margin-top: 29px;
+    opacity: 0;
+    }
+
+    &__barra::after{
+        opacity: 1;
+    }
+}
+
+//header contactos
+
+.header{
+    &__contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    list-style-type: none;
+
+        &__email{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+            &__letter{
+            width: 118px;
+            height: 16px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: colors.$color_letter;
+            text-decoration: none;
+            }
+            &__letter:hover{
+                color: colors.$color_hover;
+            }
+            .svg__mail{
+            fill: colors.$color_fill_grey;
+            margin-right: 4px;
+            }
+            .svg__mail:hover{
+                fill: colors.$color_hover;
+            }
+
+        }
+
+        &__tel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+            &__letter{
+            width: 118px;
+            height: 16px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: colors.$color_letter;
+            text-decoration: none;
+            }
+            &__letter:hover{
+                color: colors.$color_hover;
+            }
+            .svg__tel{
+                fill: colors.$color_fill_grey;
+                margin-right: 4px;
+                cursor: pointer;
+            }
+            .svg__tel:hover{
+                fill: colors.$color_hover;
+            }
+        }
+    }
+}
+
